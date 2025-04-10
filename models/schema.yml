@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: session_summary
+    description: "This model summarizes session data by joining timestamp and user session channel data."
+    columns:
+      - name: sessionId
+        description: "Unique session identifier."
+        tests:
+          - not_null
+          - unique

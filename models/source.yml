@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw               # Matches {{ source('raw', 'session_timestamp') }} etc.
+    database: USER_DB_HORNET
+    schema: raw     #  contains the raw tables
+    
+    tables:
+      - name: user_session_channel   # Matches {{ source('raw', 'user_session_channel') }}
+        # identifier: USER_SESSION_CHANNEL
+        description: "Session data including channel info"
+        
+      - name: session_timestamp      # Matches {{ source('raw', 'session_timestamp') }}
+        # identifier: SESSION_TIMESTAMP
+        description: "Session data with timestamps"
